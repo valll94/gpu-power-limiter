@@ -1,0 +1,16 @@
+[Unit]
+Description=GPU Power Limiter and Docker Safety Service
+After=multi-user.target
+Before=docker.service
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /opt/gpu-power-limiter/gpus-powerlimit.py --daemon --verbose
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target 

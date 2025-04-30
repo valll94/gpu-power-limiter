@@ -1,0 +1,11 @@
+[Unit]
+Description=Apply GPU power configuration changes
+After=multi-user.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/usr/bin/python3 /opt/gpu-power-limiter/gpus-powerlimit.py
+
+[Install]
+WantedBy=multi-user.target 

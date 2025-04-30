@@ -1,0 +1,9 @@
+[Unit]
+Description=Watch for changes in the GPU power config file
+
+[Path]
+PathChanged=/opt/gpu-power-limiter/gpu_config.json
+Unit=gpu-config-update.service
+
+[Install]
+WantedBy=multi-user.target 
