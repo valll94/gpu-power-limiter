@@ -49,6 +49,8 @@ The system consists of the following components:
 2. Python 3 installed
 3. pynvml package installed: `pip install pynvml`
 
+**Note:** This system has been tested on Arch Linux and has not been verified on other Linux distributions.
+
 ### Installation
 
 The easiest way to install is using the provided installation script:
